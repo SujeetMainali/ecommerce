@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="Coursework" content="e-commerce site">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!--meta tags helps to optimizw search engine-->
+    <meta name="author" content="MainaliSujeet">
+    <title>e-Gadgethub</title>
+    <link rel="icon" type="image" href="../images/icon.png">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="stylesheet" href="./CSS/homePage.css">
+    <!--this is the internal CSS-->
+    <style>
+        .flashShale {
+            margin: auto;
+            width: 20%;
+            height: 30%;
+        }
+
+        #slideImage {
+            width: 300px;
+            height: 300px;
+        }
+
+        marquee {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- header contains name and navigation bar -->
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html">
+                    <h1 class="ShopName">
+                        e-Gadget Hub
+                    </h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./html/products.html">Products</a></li>
+                    <li><a href="./html/blog.html">Blog</a></li>
+                    <li><a href="./html/research.html">Research</a></li>
+                    <li><a href="./html/contact.html">Contact US</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <section>
+        <div class="loginShopping">
+            <button class="openLogInForm" id="openLogInForm">Login</button>
+
+        </div>
+        <div class="mainContainer">
+            <div class="maincontainer1">
+                <h2 style="color: black;">
+                    A Shop for <br> All E-Gadgets
+                </h2>
+                <p>HERE YOU FIND ALL ELECTRONIC <br> GADGETS OF TOP QUALITY IN REASONABLE PRICE</p>
+                <!--short description of the website-->
+                <a href="./html/products.html" class="explore">Explore &#8594</a>
+            </div>
+            <div class="maincontainer1">
+                <img src="./images/gadgets.png" alt="">
+            </div>
+        </div>
+        <!-- login form which appears on clicking login button -->
+        <div id="overlay">
+            <div id="modal">
+                <button id="closeLogInForm"><img src="./images/closeBtn.png" alt="closeBtn" height="20px"></button>
+                <div class="login">
+                    <h3>PLEASE LOG IN FIRST</h3>
+                </div>
+                <form name="message" action="">
+                    <input type="text" name="email" placeholder="UserName or Email"><br>
+                    <input type="password" name="password" placeholder="password"><br>
+                    <button class="logIN" onclick="validate()">LOG IN</button>
+                    <!--on clicking this button validate function is called-->
+                </form>
+                <p>Don't Have Account? <a href="./html/contact.html"><b>REGISTER</b></a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="flashShale">
+            <marquee behavior="" direction="right" scrollamount="4">
+                <h1 id="flash">HOT ITEMS!!! </h1>
+            </marquee>
+            <a href="./html/products.html"> <img src="./images/slideImage/1.jpg" alt="" id="slideImage"></a>
+        </div>
+        
+    </section>
+    <!--the footer of the website starts from here-->
+    <footer class="footer">
+        <div class="footerRow">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="./html/contact.html">Customer Care</a></li>
+                    <li><a href="./html/contact.html">Shop Registration</a></li>
+                    <li><a href="./html/contact.html">Complaints</a></li>
+                    <li><a href="./html/contact.html">FAQs</a></li>
+                    <li><a href="./html/contact.html">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="./html/products.html">Headphones</a></li>
+                    <li><a href="./html/products.html">Speakers</a></li>
+                    <li><a href="./html/products.html">Watch</a></li>
+                    <li><a href="./html/products.html">Mobiles</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/sujeetmainali" target="_blank">facebook</a></li>
+                    <li><a href="https://www.instagram.com/mainalisujeet/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/MainaliSujeet" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <h5 style="text-align: center;color: #bbbbbb;">&copy;Sujeet Mainali&nbsp; 2022</h5>
+    </footer>
+</body>
+<!--internal javascript starts from here-->
+<script>
+    const overlay = document.getElementById("overlay");
+
+    document.querySelector("#openLogInForm").addEventListener("click", () => {
+        overlay.style.display = "block"; //it changes the display of login popup to blick when clicked login button
+    })
+
+    document.querySelector("#closeLogInForm").addEventListener("click", () => {
+        overlay.style.display = "none"; //it changes the display to none of the login popup when clicked cross
+    })
+    //this function validates form in the login popup
+    function validate() {
+        var email = document.forms["message"]["email"].value;
+        var password = document.forms["message"]["password"].value;
+
+        if (email == "" || password == "") {
+            alert("Email or Password Missing");
+        }
+        else {
+            alert("You are logged in as " + email);
+        }
+    }
+    var images = ["./images/slideImage/1.jpg", "./images/slideImage/2.jpg", "./images/slideImage/3.jpg", "./images/slideImage/4.jpg", "./images/slideImage/5.jpg"];
+    var i = 0;
+    //this function changes the image in hot items section of homepage
+    function imagechange() {
+        document.getElementById("slideImage").src = images[i];
+        if (i < images.length - 1) {
+            i++;
+        }
+        else {
+            i = 0;
+        }
+    }
+    //this changes the color of the text in hot items
+    function flashColor() {
+        var flash = document.getElementById("flash");
+        if (flash.style.color == "red") {
+            flash.style.color = "blue";
+        }
+        else if (flash.style.color == "blue") {
+            flash.style.color = "green";
+        }
+        else {
+            flash.style.color = "red";
+        }
+    }
+
+    setInterval(imagechange, 1500); //it changes the image in HOT items every 1.5 second
+    setInterval(flashColor, 200); //it changes the color of "hot items" every 0.2 second
+</script>
+
+</html>

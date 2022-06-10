@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="Coursework" content="e-commerce site">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!--meta tags helps to optimize search engine-->
+    <meta name="author" content="MainaliSujeet">
+    <title>Products</title>
+    <link rel="icon" type="image" href="../images/icon.png">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/products.css">
+</head>
+
+<body>
+    <!-- header contains navigation bar and the name of the website -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1 class="ShopName">
+                        e-Gadget Hub
+                    </h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/products.html">Products</a></li>
+                    <li><a href="../html/blog.html">Blog</a></li>
+                    <li><a href="../html/research.html">Research</a></li>
+                    <li><a href="../html/contact.html">Contact US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- this div contains the cart which displays items on cart -->
+    <div align="right" style="margin-right: 20px; position: -webkit-sticky; position: sticky;top: 0px;" id="cartItems">
+        <button class="buy"><img src="../images/cartt.png" alt="" height="30px" width="30px"></button>
+    </div>
+    <!-- #overlay is a popup box which shows total items on the cart -->
+    <div id="overlay">
+        <div id="modal">
+            <button id="closeLogInForm">
+                <img src="../images/closeBtn.png" alt="closeBtn" height="20px">
+            </button>
+            <h3 style="text-align: center;">
+                Total items in Cart
+            </h3>
+            <h2 id="count-el" style="text-align: center;">
+                0
+            </h2>
+            <p>
+                NOTE: Click on the cart of Product Description to add items on cart...THANK YOU!!!
+            </p>
+            <div class="clearCart" align="center">
+                <input type="submit" id="save-btn" value="Clear Cart" class="options" onclick="save()">
+            </div>
+        </div>
+    </div>
+    <section class="productsSection" align="center">
+        <h2>Our Products</h2>
+        <div class="productsss">
+            <!-- here ilies the search bar of the website -->
+            <div class="search">
+                <input class="search-here" type="text" placeholder="Type to search....">
+                <a href="#" class="search-btn">
+                    <img src="../images/search.png" alt="" height="20px" width="20px">
+                </a>
+            </div>
+            <!-- product section starts from here -->
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/JBL-Tune-510BT-Ear-Headphones/dp/B08WM3LMJF/ref=sr_1_1?crid=1UFYAKP0HNGV&keywords=headphones&qid=1639867488&sprefix=headphone%2Caps%2C533&sr=8-1"
+                        target="_blank">
+                        <img id="1" class="hide" src="../images/headphone.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img id="2" class="hide" src="../images/whiteHeadphone.jpg" alt="" height="200px" width="200px">
+                    </a><br>
+                    <button class="options" onclick="change()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Headphone</b></figcaption>
+                    <p>JBL Tune 510BT: Wireless On-Ear Headphones with Purebass Sound - Black </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$200</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Fitbit-Fitness-Smartwatch-Tracking-Included/dp/B07TWFWJDZ/ref=sr_1_7?crid=1FRYDG6Y03T12&keywords=electronic%2Bgadgets&qid=1641837068&sprefix=electronic%2Bgadgets%2Caps%2C393&sr=8-7&th=1"
+                        target="_blank">
+                        <img id="3" class="show" src="../images/blackWatch.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img id="4" class="hide" src="../images/maroonWatch.jpg" alt="" height="200px"
+                            width="200px"><br>
+                    </a>
+                    <button class="options" onclick="changeWatch()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Fit Watch</b></figcaption>
+                    <p>Fitbit Versa 2 Health and Fitness Smartwatch with Heart Rate, Music, Alexa Built-In, Sleep and
+                        Swim
+                        Tracking, Bordeaux/Copper Rose, One Size (S and L Bands Included) </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$125</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Solar-Power-Charger-Flashlight-Splashproof/dp/B07FDXDB3W/ref=sr_1_1?keywords=solar%2Bpower%2Bbank%2Bqi%2Bportable%2Bcharger%2B10000mah%2Bexternal%2Bbattery&qid=1641853285&sprefix=solar%2Bpower%2Bbank%2Bqi%2B10000%2Caps%2C338&sr=8-1&th=1"
+                        target="_blank"><img class="show" id="5" src="../images/blackPB.jpg" alt="Headphone"
+                            height="200px" width="200px">
+                        <img class="hide" id="6" src="../images/orangePB.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changePower()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Solar Power Bank</b></figcaption>
+                    <p>Solar Charger Power Bank, Qi Wireless Charger 10,000mAh External Battery Pack Type C Input Port
+                        Dual
+                        Flashlight, Compass, Solar Panel Charging </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$90</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Sanitizer-Sterilizer-Smartphone-Clinically-Disinfector/dp/B08L9Z8BMJ/ref=sr_1_12?keywords=electronic+gadgets&           qid=1641324898&sprefix=electronic+gad%2Caps%2C348&sr=8-12"
+                        target="_blank">
+                        <img class="show" id="7" src="../images/uv light sanitizer.jpg" alt="UV Light Sanitizer"
+                            height="200px" width="200px">
+                        <img class="hide" id="8" src="../images/uvsanitizer2.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changeSanitizer()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>UV Light Sanitizer</b>
+
+                    </figcaption>
+                    <p>UV Light Sanitizer, Phone Sanitizer UV Box | UV Sterilizer Box for Smartphone | Clinically Proven
+                        Kills Germs Viruses & Bacteria UV-C Light Disinfector 2021 New Gift for Family Men</p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$50</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Samsung-Factory-Unlocked-Smartphone-Pro-Grade/dp/B08FYV84JT/ref=sr_1_2?crid=FFB0ULFWRQCQ&keywords=mobile&qid=1641848429&sprefix=mobil%2Caps%2C335&sr=8-2&th=1"
+                        target="_blank"><img class="show" id="9" src="../images/samsungBlue.jpg" alt="Headphone"
+                            height="200px" width="200px">
+                        <img class="hide" id="10" src="../images/samsungRed.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changeSamsung()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Samsung Galaxy S20</b></figcaption>
+                    <p>
+                        SAMSUNG Galaxy S20 FE 5G Factory Unlocked Android Cell Phone 128GB US Version Smartphone
+                        Pro-Grade
+                        Camera 30X Space Zoom Night Mode
+                    </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$80</b>
+                    <button class="buy" id="buy" onclick="buy()">
+                        <img src="../images/cartt.png" height="30px" width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Wireless-inphic-Rechargeable-Receiver-Black/dp/B074M96FKW/ref=sr_1_2?crid=93SBOAWJO35D&keywords=mouse&qid=1641851049&sprefix=mouse%2Caps%2C683&sr=8-2&th=1"
+                        target="_blank">
+                        <img class="show" id="11" src="../images/greyMouse.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img class="hide" id="12" src="../images/blackMouse.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changeMouse()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Wirelesss Mouse</b></figcaption>
+                    <p>INPHIC Wireless Mouse, [Upgraded: Battery Level Visible] Large Ergonomic Rechargeable 2.4G
+                        Optical PC
+                        Laptop Cordless Mice with USB Nano Receiver </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$20</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/NEWVANGA-International-Universal-Worldwide-Charging/dp/B01FO4W5W2/ref=sr_1_3?keywords=adapter&qid=1641850999&sprefix=adap%2Caps%2C516&sr=8-3&th=1"
+                        target="_blank">
+                        <img class="show" id="13" src="../images/blackAdapter.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img class="hide" id="14" src="../images/whiteAdapter.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changeAdapter()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Travel Adapter</b></figcaption>
+                    <p>International Universal All in One Worldwide Travel Adapter Wall Charger AC Power Plug Adapter
+                        with
+                        Dual USB Charging Ports for USA EU UK AUS European Cell Phone Laptop </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$12</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/SHARDOR-Adjustable-Electric-Removable-Stainless/dp/B08JCJGJSX/ref=sr_1_11?crid=UR9DMT7AUT1U&keywords=grinder&qid=1641850865&sprefix=grinde%2Caps%2C351&sr=8-11&th=1"
+                        target="_blank">
+                        <img class="show" id="15" src="../images/whiteCoffeeGronder.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img id="16" class="hide" src="../images/blackCoffeeGrinder.jpg" alt="" width="200px"
+                            height="200px">
+                    </a>
+                    <button class="options" onclick="changeGrinder()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Coffee Grinder</b></figcaption>
+                    <p>SHARDOR Adjustable Coffee Grinder Electric, Herb Grinder, Spice Grinder, Coffee Bean Grinder,
+                        Espresso Grinder with 1 Removable Stainless Steel Bowl </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$40</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/Cooling-15-6-17-Portable-Powered-Function/dp/B091PKF2R7/ref=sr_1_2?crid=37D3PQCCH58SF&keywords=laptop%2Bcooler&qid=1641851836&sprefix=laptop%2Bcooler%2Caps%2C400&sr=8-2&th=1"
+                        target="_blank">
+                        <img id="17" class="show" src="../images/blueLaptopCooler.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img id="18" class="hide" src="../images/redLaptopCooler.jpg" alt="" height="200px"
+                            width="200px">
+                    </a>
+                    <button class="options" onclick="changeCooler()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>Laptop Cooling Pad</b></figcaption>
+                    <p>Laptop Cooling Pad, Laptop Cooler with 6 Quiet Led Fans for 15.6-17 Inch Laptop Cooling Fan
+                        Stand,
+                        Portable Ultra Slim USB Powered Gaming Laptop Cooling Pad, Switch Control Fan Speed Function
+                    </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$30</b>
+                    <button class="buy" id="buy" onclick="buy()"><img src="../images/cartt.png" height="30px"
+                            width="30px"></button>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="left">
+                    <a href="https://www.amazon.com/EDUPLINK-Bluetooth-Waterproof-Speakers-Pulsating/dp/B088GVPJBB/ref=sr_1_5?keywords=speakers%2Bbluetooth%2Bwireless&qid=1641852410&sprefix=spea%2Caps%2C390&sr=8-5&th=1"
+                        target="_blank">
+                        <img id="19" class="show" src="../images/greenSpeaker.jpg" alt="Headphone" height="200px"
+                            width="200px">
+                        <img id="20" class="hide" src="../images/blackSpeaker.jpg" alt="" height="200px" width="200px">
+                    </a>
+                    <button class="options" onclick="changeSpeaker()">options</button>
+                </div>
+                <div class="right">
+                    <figcaption><b>WaterProof Bluetooth Speaker</b></figcaption>
+                    <p>EDUPLINK Portable Bluetooth Speaker Waterproof IPX7 Wireless Speaker with 20W Louder Stereo Sound
+                        Outdoor Speakers with Party Lights True Wireless Stereo Pairing for Home Party </p>
+                    <div class="rating">
+                        <img src="../images/4star.png" alt="" height="25px">
+                    </div>
+                    Price: <b>$40</b>
+                    <button class="buy" id="buy" onclick="buy()">
+                        <img src="../images/cartt.png" height="30px"
+                            width="30px">
+                    </button>
+                </div>
+            </div>
+            <!-- product section ends here -->
+        </div>
+
+    </section>
+    <!-- from here the footer of the page starts -->
+    <footer class="footer">
+        <div class="footerRow">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="../html/contact.html">Customer Care</a></li>
+                    <li><a href="../html/contact.html">Shop Registration</a></li>
+                    <li><a href="../html/contact.html">Complaints</a></li>
+                    <li><a href="../html/contact.html">FAQs</a></li>
+                    <li><a href="../html/contact.html">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="../html/products.html">Headphones</a></li>
+                    <li><a href="../html/products.html">Speakers</a></li>
+                    <li><a href="../html/products.html">Watch</a></li>
+                    <li><a href="../html/products.html">Mobiles</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/sujeetmainali" target="_blank">facebook</a></li>
+                    <li><a href="https://www.instagram.com/mainalisujeet/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/MainaliSujeet" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- internal css is used here to change the color of h5  tag -->
+        <h5 style="text-align: center;color: #bbbbbb;">&copy;Sujeet Mainali,&nbsp; 2022</h5>
+        <!--  &nbsp; is used to give an extra space and &copy;  is to insert copy symbol -->
+    </footer>
+</body>
+<!-- linking external JS file  -->
+<script src="../javascript/index.js"></script>
+<script>
+
+</script>
+
+</html>

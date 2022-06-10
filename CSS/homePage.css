@@ -1,0 +1,109 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+}
+
+
+.maincontainer1 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.maincontainer1 img{
+    max-width: 100%;
+    padding: 50px 0;
+
+}
+.maincontainer1 h2{
+    font-size: 30px;
+    line-height: 40px;
+    margin: 25px 0;
+    color: aliceblue;
+}
+.maincontainer1 p{
+    color: black;
+}
+.explore{
+    display: inline-block;   
+    background-color: skyblue;
+    color: black;
+    padding: 8px 30px;
+    /* margin-left: 310px; */
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background 0.8s;
+}
+.explore:hover{
+    background: rgb(60, 79, 87);
+    color: skyblue;
+}
+
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* adjusting height width etc. of login form */
+#modal {
+    height: 250px;
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid greenyellow;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    /* position: absolute; */
+    background-color: #21D4FD;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+
+}
+
+#closeLogInForm {
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.login {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 60px;
+}
+
+form input {
+    background-color: greenyellow;
+    margin-left: 60px;
+    padding: 5px;
+    border-radius: 10px 0 10px 0;
+    margin-bottom: 10px;
+}
+
+.logIN {
+    background-color: greenyellow;
+    margin-left: 115px;
+    border-radius: 10px 0 10px 0;
+    cursor: pointer;
+}
+#modal p{
+    color: black;
+    margin-left: 35px;
+}
+#modal p a{
+    color: red;
+    text-decoration: none;
+}
